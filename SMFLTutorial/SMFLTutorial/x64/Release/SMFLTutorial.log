@@ -1,0 +1,18 @@
+﻿Build started 04-11-2014 12:06:25.
+     1>Project "C:\ITU\Kandidat\GameEngines\Project\SMFLTutorial\SMFLTutorial\SMFLTutorial.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\CL.exe /c /I"SFML-2.1\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"x64\Release\SMFLTutorial.pch" /Fo"x64\Release\\" /Fd"x64\Release\vc110.pdb" /Gd /TP /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\CL.exe /c /I"SFML-2.1\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"x64\Release\SMFLTutorial.pch" /Fo"x64\Release\\" /Fd"x64\Release\vc110.pdb" /Gd /TP /errorReport:prompt SMFLTutorial.cpp
+         SMFLTutorial.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\ITU\Kandidat\GameEngines\Project\SMFLTutorial\x64\Release\SMFLTutorial.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"SFML-2.1\lib" "sfml-system.lib" "sfml-window.lib" "sfml-graphics.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\ITU\Kandidat\GameEngines\Project\SMFLTutorial\x64\Release\SMFLTutorial.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\ITU\Kandidat\GameEngines\Project\SMFLTutorial\x64\Release\SMFLTutorial.lib" /MACHINE:X64 x64\Release\SMFLTutorial.obj
+         x64\Release\stdafx.obj
+         Generating code
+         Finished generating code
+         SMFLTutorial.vcxproj -> C:\ITU\Kandidat\GameEngines\Project\SMFLTutorial\x64\Release\SMFLTutorial.exe
+     1>Done Building Project "C:\ITU\Kandidat\GameEngines\Project\SMFLTutorial\SMFLTutorial\SMFLTutorial.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.53

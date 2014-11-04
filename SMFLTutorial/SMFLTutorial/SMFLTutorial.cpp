@@ -1,0 +1,33 @@
+// SMFLTutorial.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <SFML/Graphics.hpp>
+
+int main()
+{
+    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
+    sf::CircleShape shape(100.f);
+	sf::Texture spriteImg;
+	spriteImg.loadFromFile("C:\\ITU\\Kandidat\\GameEngines\\Project\\SMFLTutorial\\SMFLTutorial\\Assets\\sprite.jpg");
+	sf::Sprite sprite(spriteImg);
+    shape.setFillColor(sf::Color::Green);
+
+    while (window.isOpen())
+    {
+        sf::Event event;
+        while (window.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
+		
+        window.clear();
+        window.draw(shape);
+		window.draw(sprite);
+        window.display();
+    }
+
+    return 0;
+}
+

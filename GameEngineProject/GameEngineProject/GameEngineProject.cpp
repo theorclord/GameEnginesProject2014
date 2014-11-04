@@ -2,11 +2,39 @@
 //
 
 #include "stdafx.h"
+#include "FrameHandler.h"
+#include <SFML/Graphics.hpp>
+
+using namespace Project;
 
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	int i = 2;
-	return i;
+	FrameHandler handler;
+	handler.CreateFrame(200,200, "hej claus");
+	
+	sf::RenderWindow window(sf::VideoMode(400, 400), "SFML works!");
+    sf::CircleShape shape(100.f);
+	sf::Texture spriteImg;
+	spriteImg.loadFromFile("C:\\ITU\\Kandidat\\GameEngines\\Project\\SMFLTutorial\\SMFLTutorial\\Assets\\sprite.jpg");
+	sf::Sprite sprite(spriteImg);
+    shape.setFillColor(sf::Color::Green);
+
+    while (window.isOpen())
+    {
+        sf::Event event;
+        while (window.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
+		
+        window.clear();
+        window.draw(shape);
+		window.draw(sprite);
+        window.display();
+    }
+
+    return 0;
 }
 
