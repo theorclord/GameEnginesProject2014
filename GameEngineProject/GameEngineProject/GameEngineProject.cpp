@@ -16,7 +16,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	sf::RenderWindow window(sf::VideoMode(400, 400), "SFML works!");
     sf::CircleShape shape(100.f);
 	sf::Texture spriteImg;
-	spriteImg.loadFromFile("C:\\ITU\\Kandidat\\GameEngines\\Project\\SMFLTutorial\\SMFLTutorial\\Assets\\sprite.jpg");
+	spriteImg.loadFromFile("Assets\\sprite.jpg");
 	sf::Sprite sprite(spriteImg);
     shape.setFillColor(sf::Color::Green);
 
