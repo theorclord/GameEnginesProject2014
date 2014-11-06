@@ -11,7 +11,12 @@ using namespace Project;
 int _tmain(int argc, _TCHAR* argv[])
 {
 	FrameHandler handler;
-	handler.CreateFrame(200,200, "hej claus");
+	handler.CreateFrame(200, 200, "hej claus");
+	while (true) 
+	{
+		handler.Update();
+		break;
+	}
 	
 	sf::RenderWindow window(sf::VideoMode(400, 400), "SFML works!");
     sf::CircleShape shape(100.f);
@@ -19,7 +24,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	spriteImg.loadFromFile("Assets\\sprite.jpg");
 	sf::Sprite sprite(spriteImg);
     shape.setFillColor(sf::Color::Green);
-
     while (window.isOpen())
     {
         sf::Event event;
