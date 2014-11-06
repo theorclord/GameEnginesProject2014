@@ -4,19 +4,18 @@
 #include "stdafx.h"
 #include "FrameHandler.h"
 #include <SFML/Graphics.hpp>
-
-using namespace Project;
+#include "Sprite.h"
 
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	Sprite testSprite("my sprite", "Assets\\sprite.jpg");
+
+
 	FrameHandler handler;
-	handler.CreateFrame(200, 200, "hej claus");
-	while (true) 
-	{
-		handler.Update();
-		break;
-	}
+	handler.CreateFrame(200,200, "hej claus");
+
+	handler.AddSprite(testSprite);
 	
 	sf::RenderWindow window(sf::VideoMode(400, 400), "SFML works!");
     sf::CircleShape shape(100.f);
@@ -24,6 +23,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	spriteImg.loadFromFile("Assets\\sprite.jpg");
 	sf::Sprite sprite(spriteImg);
     shape.setFillColor(sf::Color::Green);
+
     while (window.isOpen())
     {
         sf::Event event;

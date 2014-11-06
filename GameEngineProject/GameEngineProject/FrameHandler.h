@@ -1,17 +1,16 @@
 #include <SFML/Graphics.hpp>
-
+#include <list>
+#include "Sprite.h"
 using namespace std;
-using namespace sf;
-namespace Project{
-	class FrameHandler
-	{
-	public:
-		void CreateFrame(int width,int height,string title);
-		void Resize(int width, int height);
-		void Update(void);
-		Sprite Draw(string);
 
-	protected:
-		RenderWindow window;
-	};
-}
+class FrameHandler
+{
+public:
+	FrameHandler();
+	~FrameHandler();
+	virtual void CreateFrame(int width,int height,string title);
+	virtual void AddSprite(Sprite);
+
+private:
+	list<Sprite> spriteList;
+};

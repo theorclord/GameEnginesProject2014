@@ -1,13 +1,13 @@
-﻿Build started 06-11-2014 12:56:29.
-     1>Project "C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\GameEngineProject\GameEngineProject.vcxproj" on node 2 (Build target(s)).
+﻿Build started 06-11-2014 12:58:29.
+     1>Project "C:\ITU\Kandidat\GameEngines\Project\GameEnginesProject2014\GameEngineProject\GameEngineProject\GameEngineProject.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"SFML-2.1\include" /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"x64\Debug\GameEngineProject.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt FrameHandler.cpp GameEngineProject.cpp
-         FrameHandler.cpp
-     1>FrameHandler.cpp(12): warning C4018: '<' : signed/unsigned mismatch
-     1>FrameHandler.cpp(14): warning C4018: '>' : signed/unsigned mismatch
-         Generating Code...
-         Skipping... (no relevant changes detected)
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\CL.exe /c /I"SFML-2.1\include" /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"x64\Debug\GameEngineProject.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc110.pdb" /Gd /TP /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\CL.exe /c /I"SFML-2.1\include" /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"x64\Debug\GameEngineProject.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc110.pdb" /Gd /TP /errorReport:prompt FrameHandler.cpp GameEngineProject.cpp Sprite.cpp
+         Sprite.cpp
          GameEngineProject.cpp
+         FrameHandler.cpp
+         Generating Code...
        PreLinkEvent:
          copy SFML-2.1\bin
          :VCEnd
@@ -25,12 +25,13 @@
          SFML-2.1\bin\sfml-window-d-2.dll
                 12 file(s) copied.
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\x64\Debug\GameEngineProject.exe" /INCREMENTAL /NOLOGO /LIBPATH:"SFML-2.1\lib" "sfml-audio-d.lib" "sfml-graphics-d.lib" "sfml-main-d.lib" "sfml-network-d.lib" "sfml-system-d.lib" "sfml-window-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\x64\Debug\GameEngineProject.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\x64\Debug\GameEngineProject.lib" /MACHINE:X64 x64\Debug\FrameHandler.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\ITU\Kandidat\GameEngines\Project\GameEnginesProject2014\GameEngineProject\x64\Debug\GameEngineProject.exe" /INCREMENTAL /NOLOGO /LIBPATH:"SFML-2.1\lib" "sfml-audio-d.lib" "sfml-graphics-d.lib" "sfml-main-d.lib" "sfml-network-d.lib" "sfml-system-d.lib" "sfml-window-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\ITU\Kandidat\GameEngines\Project\GameEnginesProject2014\GameEngineProject\x64\Debug\GameEngineProject.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\ITU\Kandidat\GameEngines\Project\GameEnginesProject2014\GameEngineProject\x64\Debug\GameEngineProject.lib" /MACHINE:X64 x64\Debug\FrameHandler.obj
          x64\Debug\GameEngineProject.obj
+         x64\Debug\Sprite.obj
          x64\Debug\stdafx.obj
-         GameEngineProject.vcxproj -> C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\x64\Debug\GameEngineProject.exe
-     1>Done Building Project "C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\GameEngineProject\GameEngineProject.vcxproj" (Build target(s)).
+         GameEngineProject.vcxproj -> C:\ITU\Kandidat\GameEngines\Project\GameEnginesProject2014\GameEngineProject\x64\Debug\GameEngineProject.exe
+     1>Done Building Project "C:\ITU\Kandidat\GameEngines\Project\GameEnginesProject2014\GameEngineProject\GameEngineProject\GameEngineProject.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.81
+Time Elapsed 00:00:02.63
