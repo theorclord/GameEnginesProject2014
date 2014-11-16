@@ -3,6 +3,7 @@
 #include "stdafx.h"
 #include <string>
 #include <tuple>
+#include <SFML/Graphics.hpp>
 
 using namespace std;
 
@@ -15,9 +16,10 @@ class Sprite
 		Sprite(string title, string filePath);
 		virtual void setPosition(int x, int y);
 		virtual tuple<int,int> getPosition();
+		virtual void setImage(string filePath);
 
 	private:
 		string title;
-		string filePath;
+		sf::Texture Image;
 		tuple<int,int> position;
 };

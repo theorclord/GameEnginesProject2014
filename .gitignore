@@ -1,1 +1,5 @@
 *.sdf
+*.obj
+*.pch
+*.ikl
+*.pdb
