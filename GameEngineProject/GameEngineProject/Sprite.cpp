@@ -17,7 +17,7 @@ Sprite::Sprite(string title)
 Sprite::Sprite(string title, string filePath)
 {
 	Sprite::title = title;
-	Sprite::filePath = filePath;
+	Image.loadFromFile(filePath);
 }
 
 void Sprite::setPosition(int x, int y){
@@ -27,3 +27,9 @@ void Sprite::setPosition(int x, int y){
 tuple<int,int> Sprite::getPosition(){
 	return position;
 }
+
+void Sprite::setImage(string filePath){
+	Image.loadFromFile(filePath);
+}
+
+ 
