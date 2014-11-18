@@ -8,13 +8,9 @@ class FrameHandler
 public:
 	FrameHandler();
 	~FrameHandler();
-	virtual void CreateFrame(int width,int height,string title);
-	void Resize(int width, int height);
-	void Update(void);
+	static void CreateFrame(int width, int height, string title);
 	virtual void AddSprite(Sprite);
-
-protected:
-	sf::RenderWindow window;
+	static void renderingThread(sf::RenderWindow* window);
 
 private:
 	list<Sprite> spriteList;
