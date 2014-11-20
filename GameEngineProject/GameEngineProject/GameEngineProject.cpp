@@ -6,7 +6,6 @@
 #include <SFML/Graphics.hpp>
 #include "Sprite.h"
 
-
 int _tmain(int argc, _TCHAR* argv[])
 {
 	Sprite testSprite("my sprite", "Assets\\sprite.jpg");
@@ -14,8 +13,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	FrameHandler handler;
 	handler.CreateFrame(300,300, "hej claus");
-
-	handler.AddSprite(testSprite);
+	//handler.AddSprite(testSprite);
 
 	sf::RenderWindow window(sf::VideoMode(400, 400), "SFML works!");
     sf::CircleShape shape(100.f);
