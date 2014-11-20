@@ -17,7 +17,7 @@ Sprite::Sprite(string title)
 Sprite::Sprite(string title, string filePath)
 {
 	Sprite::title = title;
-	Image.loadFromFile(filePath);
+	setImage(filePath);
 }
 
 void Sprite::setPosition(int x, int y){
@@ -32,4 +32,6 @@ void Sprite::setImage(string filePath){
 	Image.loadFromFile(filePath);
 }
 
- 
+sf::Texture Sprite::getImage(){
+	return Image;
+}

@@ -9,9 +9,9 @@ public:
 	FrameHandler();
 	~FrameHandler();
 	static void CreateFrame(int width, int height, string title);
-	virtual void AddSprite(Sprite);
+	static void AddSprite(Sprite);
 	static void renderingThread(sf::RenderWindow* window);
 
 private:
-	list<Sprite> spriteList;
+	static list<Sprite> spriteList;
 };

@@ -14,11 +14,12 @@ FrameHandler::~FrameHandler()
 
 void FrameHandler::AddSprite(Sprite sprite)
 {
-	FrameHandler::spriteList.assign(1, sprite);
+	list<Sprite>::iterator it;
+	it = spriteList.end();
+	spriteList.insert(it, sprite);
 }
 
 void FrameHandler::renderingThread(sf::RenderWindow* window)
-//void renderingThread(sf::RenderWindow& window)
 {
 	sf::CircleShape shape(100.f);
 	shape.setFillColor(sf::Color::Green);
@@ -28,9 +29,12 @@ void FrameHandler::renderingThread(sf::RenderWindow* window)
 	while (window->isOpen())
 	{
 		// draw...
-
 		window->clear();
-		window->draw(shape);
+
+		for each (Sprite sprite in FrameHandler::spriteList)
+		{
+			//Logic for drawing Sprites
+		}
 
 		// end the current frame
 		window->display();
@@ -46,26 +50,7 @@ void FrameHandler::CreateFrame(int width, int height, std::string title){
 	// launch the rendering thread
 	sf::Thread thread(&FrameHandler::renderingThread, &window);
 	thread.launch();
-	/*
-	sf::CircleShape shape(100.f);
-	shape.setFillColor(sf::Color::Green);
-	shape.setPosition(50, 50);
 
-	while (window.isOpen())
-	{
-		sf::Event event;
-		while (window.pollEvent(event))
-		{
-			if (event.type == sf::Event::Closed)
-				window.close();
-		}
-		
-		window.clear();
-		window.draw(shape);
-		window.display();
-		
-	}
-	*/
 	while (window.isOpen())
 	{
 		sf::Event event;
@@ -76,3 +61,11 @@ void FrameHandler::CreateFrame(int width, int height, std::string title){
 		}
 	}
 }
+
+list<Sprite> init()
+{
+	list<Sprite> tmp; 
+	return tmp;
+}
+
+list<Sprite> FrameHandler::spriteList(init());
