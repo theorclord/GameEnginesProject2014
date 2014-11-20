@@ -11,9 +11,10 @@ class Physics
 	public:
 		Physics();
 		~Physics();
-		virtual void setVelocity(tuple<int,int> velocity);
+		virtual void setVelocity(tuple<float,float> velocity);
+		virtual void addForce(tuple<float, float> force);
 
 	private:
-		tuple<int,int> velocity;
-		tuple<int,int> forceSum;
+		tuple<float,float> velocity;
+		tuple<float,float> forceSum;
 };
