@@ -12,3 +12,10 @@ sf::Sprite Transform::getSprite(){
 
 	return Transform::sprite;
 }
+int Transform::getLayer(){
+	return Transform::layer;
+}
+
+int Transform::setLayer(int layer){
+	Transform::layer = layer;
+}
