@@ -1,6 +1,7 @@
 #pragma once
 
 #include "stdafx.h"
+#include "Physics.h"
 #include <string>
 #include <tuple>
 #include <SFML/Graphics.hpp>
@@ -16,6 +17,7 @@ public:
 	virtual sf::Sprite getSprite();
 
 private:
+	Physics physics;
 	sf::Sprite sprite;
 	int layer;
 };
