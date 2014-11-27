@@ -1,6 +1,7 @@
 #pragma once
 
 #include "stdafx.h"
+#include "Physics.h"
 #include <string>
 #include <tuple>
 #include <SFML/Graphics.hpp>
@@ -19,6 +20,7 @@ public:
 	virtual int setLayer(int layer);
 
 private:
+	Physics physics;
 	sf::Sprite sprite;
 	string spritePath;
 	int layer;
