@@ -166,6 +166,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CircleCollider.h" />
     <ClInclude Include="FrameHandler.h" />
     <ClInclude Include="Physics.h" />
     <ClInclude Include="Sprite.h" />
@@ -176,6 +177,7 @@
   <ItemGroup>
     <ClCompile Include="FrameHandler.cpp" />
     <ClCompile Include="GameEngineProject.cpp" />
+    <ClCompile Include="Physics.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
