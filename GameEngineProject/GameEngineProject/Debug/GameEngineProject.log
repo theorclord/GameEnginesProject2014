@@ -1,12 +1,12 @@
-﻿Build started 02-12-2014 11:31:22.
+﻿Build started 02-12-2014 15:46:18.
      1>Project "C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\GameEngineProject\GameEngineProject.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"SFML-2.1\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\GameEngineProject.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt FrameHandler.cpp GameEngineProject.cpp Transform.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"SFML-2.1\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\GameEngineProject.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt CircleCollider.cpp FrameHandler.cpp GameEngineProject.cpp Physics.cpp Transform.cpp
          Transform.cpp
-         Generating Code...
-         Compiling...
+         Physics.cpp
          GameEngineProject.cpp
          FrameHandler.cpp
+         CircleCollider.cpp
          Generating Code...
        PreLinkEvent:
          copy SFML-2.1\bin
@@ -25,7 +25,8 @@
          SFML-2.1\bin\sfml-window-d-2.dll
                 12 file(s) copied.
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\Debug\GameEngineProject.exe" /INCREMENTAL /NOLOGO /LIBPATH:"SFML-2.1\lib" "sfml-audio-d.lib" "sfml-graphics-d.lib" "sfml-main-d.lib" "sfml-network-d.lib" "sfml-system-d.lib" "sfml-window-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\Debug\GameEngineProject.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\Debug\GameEngineProject.lib" /MACHINE:X86 Debug\FrameHandler.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\Debug\GameEngineProject.exe" /INCREMENTAL /NOLOGO /LIBPATH:"SFML-2.1\lib" "sfml-audio-d.lib" "sfml-graphics-d.lib" "sfml-main-d.lib" "sfml-network-d.lib" "sfml-system-d.lib" "sfml-window-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\Debug\GameEngineProject.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\Debug\GameEngineProject.lib" /MACHINE:X86 Debug\CircleCollider.obj
+         Debug\FrameHandler.obj
          Debug\GameEngineProject.obj
          Debug\Physics.obj
          Debug\Sprite.obj
@@ -36,4 +37,4 @@
 
 Build FAILED.
 
-Time Elapsed 00:00:02.03
+Time Elapsed 00:00:02.57

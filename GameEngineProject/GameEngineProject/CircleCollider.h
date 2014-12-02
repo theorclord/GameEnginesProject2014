@@ -1,16 +1,16 @@
+#pragma once
 #include "stdafx.h"
-#include "Transform.h"
-
+#include <tuple>
 
 class CircleCollider
 {
-	public:
-		virtual void OnEnter();
-		virtual void OnStay();
-		virtual void OnExit();
-
 	private:
-		tuple<float,float> center;
+		//tuple<float,float> center;
 		float radius;
 		bool stay;
+	public:
+		bool DetectCollision(CircleCollider coll, float dist);
+		float getRadius();
+		void setRadius(float rad);
+		virtual void OnEnter();
 };

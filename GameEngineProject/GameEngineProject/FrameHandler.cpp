@@ -29,13 +29,22 @@ void FrameHandler::renderingThread(sf::RenderWindow* window)
 		// draw...
 		window->clear();
 
-		for each (Transform sprite in FrameHandler::spriteList)
-		{
-			for each (Transform spritez in FrameHandler::spriteList){
-				sprite.DetectCollision(spritez);
+		//Convert list to Vector
+		int i = 0;
+		vector<Transform> v1(FrameHandler::spriteList.size());
+		for each(Transform trans in FrameHandler::spriteList){
+			v1[i] = trans;
+			i++;
+		}
+
+		//Draw and update spriteList
+		for (i = 0; i < FrameHandler::spriteList.size(); i++){
+			for (int j = 0; j < FrameHandler::spriteList.size(); j++){
+				if (i != j)
+					v1[i].DetectCollision(v1[j]);
 			}
-			sprite.Update();
-			sf::Sprite spr = sprite.getSprite();
+			v1[i].Update();
+			sf::Sprite spr = *v1[i].getSprite();
 			window->draw(spr);
 		}
 

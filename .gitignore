@@ -5,3 +5,4 @@
 *.pdb
 *.suo
 GameEngineProject/GameEngineProject.sdf
+*.orig

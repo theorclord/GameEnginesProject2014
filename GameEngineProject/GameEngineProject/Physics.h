@@ -17,5 +17,5 @@ class Physics
 		
 	private:
 		tuple<float,float> velocity;
-		tuple<float,float> forceSum;
+		tuple<float,float> acceleration;
 };

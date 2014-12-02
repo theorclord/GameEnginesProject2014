@@ -1,40 +1,41 @@
-// GameEngineProject.cpp : Defines the entry point for the console application.
-//
+
 
 #include "stdafx.h"
 #include "FrameHandler.h"
-#include <SFML/Graphics.hpp>
 #include "Sprite.h"
 #include <thread>
+#include <iostream>
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	/*
-	sf::Texture spriteImg;
-	spriteImg.loadFromFile("Assets\\sprite.jpg");
-	sf::Sprite testSprite(spriteImg);
-	*/
-	Transform trans1; 
+	Transform trans1;
+	CircleCollider cc;
+	cc.setRadius(150);
 	trans1.setSprite("Assets\\sprite.jpg");
+	trans1.getSprite()->setPosition(100, 100);
+	trans1.setPhysics(Physics());
+	trans1.setCollider(cc);
+
 	Transform trans2;
+	CircleCollider c2;
+	c2.setRadius(150);
+	trans2.setSprite("Assets\\sprite.jpg");
+	trans2.getSprite()->setPosition(500, 100);
+	trans2.setPhysics(Physics());
+	trans2.setCollider(c2);
 
 	FrameHandler handler;
-	handler.CreateFrame(300, 300, "hej claus");
 	handler.AddSprite(trans1);
-	handler.CreateFrame(300, 300, "hej mikkel");
-
-	/*
-	handler.AddSprite(trans1);
-	thread wthread(handler.CreateFrame, 300, 300, "hej claus");
-	wthread.join();
-	*/
-
+	handler.CreateFrame(1000, 900, "hej claus");
+	handler.AddSprite(trans2);
+	handler.CreateFrame(1000, 900, "hej mikkel");
 	
 	/*
-	sf::RenderWindow window(sf::VideoMode(400, 400), "SFML works!");
+	sf::RenderWindow window(sf::VideoMode(1000, 400), "SFML works!");
 	sf::Texture spriteImg;
 	spriteImg.loadFromFile("Assets\\sprite.jpg"); 
 	sf::Sprite sprite(spriteImg); 
+	sprite.setPosition(500, 100);
     //shape.setFillColor(sf::Color::Green);
 
     while (window.isOpen())
@@ -52,6 +53,7 @@ int _tmain(int argc, _TCHAR* argv[])
         window.display();
     }
 	*/
+	
 	
 
     return 0;

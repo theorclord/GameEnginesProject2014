@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Transform.h"
+#include <cmath>
 
 Transform::Transform(){
 }
@@ -14,8 +15,8 @@ void Transform::setSprite(string spritePath){
 	Transform::sprite = sf::Sprite(tex);
 }
 
-sf::Sprite Transform::getSprite(){
-	return Transform::sprite;
+sf::Sprite* Transform::getSprite(){
+	return &sprite;
 }
 
 int Transform::getLayer(){
@@ -41,5 +42,16 @@ Physics Transform::getPhysics(){
 }
 
 bool Transform::DetectCollision(Transform transform){
+	float dist = std::sqrtf(std::powf(transform.getSprite()->getPosition().x - Transform::sprite.getPosition().x, 2) + 
+		std::powf(transform.getSprite()->getPosition().y - Transform::sprite.getPosition().y, 2));
+	Transform::coll.DetectCollision(transform.getCollider(), dist);
 	return false;
+}
+
+CircleCollider Transform::getCollider(){
+	return Transform::coll;
+}
+
+void Transform::setCollider(CircleCollider coll){
+	Transform::coll = coll;
 }

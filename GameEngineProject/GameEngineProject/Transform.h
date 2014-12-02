@@ -3,8 +3,8 @@
 #include "stdafx.h"
 #include "Physics.h"
 #include <string>
-#include <tuple>
 #include <SFML/Graphics.hpp>
+#include "CircleCollider.h"
 
 using namespace std;
 
@@ -13,13 +13,15 @@ class Transform
 public:
 	Transform();
 	~Transform();
-	//virtual void setSprite(sf::Sprite sprite);
-	virtual sf::Sprite getSprite();
-	virtual void setSprite(string);
-	virtual int getLayer();
-	virtual void setLayer(int layer);
+	sf::Sprite* getSprite();
+	void setSprite(string);
+	int getLayer();
+	void setLayer(int layer);
 	void setPhysics(Physics physics);
 	Physics getPhysics();
+	CircleCollider getCollider();
+	void setCollider(CircleCollider coll);
+
 	virtual bool DetectCollision(Transform transfrom); //True if collided, false if not
 
 	void Update();
@@ -30,4 +32,5 @@ private:
 	string spritePath;
 	int layer;
 	sf::Texture tex;
+	CircleCollider coll;
 };

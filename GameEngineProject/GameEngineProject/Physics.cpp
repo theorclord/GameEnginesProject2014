@@ -15,12 +15,14 @@ void Physics::setVelocity(tuple<float,float> velocity){
 
 void Physics::addAcceleration(tuple<float,float> acc)
 {
-	//TODO
+	std::get<0>(Physics::acceleration) = std::get<0>(Physics::acceleration) + std::get<0>(acc);
+	std::get<1>(Physics::acceleration) = std::get<1>(Physics::acceleration) + std::get<1>(acc);
 }
 
 void Physics::Update()
 {
-	//TODO
+	std::get<0>(Physics::velocity) = std::get<0>(Physics::velocity) + std::get<0>(Physics::acceleration);
+	std::get<1>(Physics::velocity) = std::get<1>(Physics::velocity) + std::get<1>(Physics::acceleration);
 }
 
 tuple<float,float> Physics::getVelocity()
