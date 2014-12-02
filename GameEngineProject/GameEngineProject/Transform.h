@@ -5,6 +5,7 @@
 #include <string>
 #include <tuple>
 #include <SFML/Graphics.hpp>
+#include "Collider.h"
 
 using namespace std;
 
@@ -13,13 +14,15 @@ class Transform
 public:
 	Transform();
 	~Transform();
-	//virtual void setSprite(sf::Sprite sprite);
-	virtual sf::Sprite getSprite();
-	virtual void setSprite(string);
-	virtual int getLayer();
-	virtual int setLayer(int layer);
+	sf::Sprite getSprite();
+	void setSprite(string);
+	int getLayer();
+	void setLayer(int layer);
 	void setPhysics(Physics physics);
 	Physics getPhysics();
+	Collider getCollider();
+	void setCollider();
+
 	virtual bool DetectCollision(Transform transfrom); //True if collided, false if not
 
 	void Update();
@@ -29,4 +32,5 @@ private:
 	sf::Sprite sprite;
 	string spritePath;
 	int layer;
+	Collider collider;
 };
