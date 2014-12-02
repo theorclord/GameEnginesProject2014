@@ -12,28 +12,28 @@ FrameHandler::~FrameHandler()
 {
 }
 
-void FrameHandler::AddSprite(Sprite sprite)
+void FrameHandler::AddSprite(Transform sprite)
 {
-	list<Sprite>::iterator it;
+	// TODO: Arrange according to layer
+	list<Transform>::iterator it;
 	it = spriteList.end();
 	spriteList.insert(it, sprite);
+	spriteList.sort([](Transform & a, Transform & b) { return a.getLayer() < b.getLayer(); });
 }
 
 void FrameHandler::renderingThread(sf::RenderWindow* window)
 {
-	sf::CircleShape shape(100.f);
-	shape.setFillColor(sf::Color::Green);
-	shape.setPosition(50, 50);
-
 	// the rendering loop
 	while (window->isOpen())
 	{
 		// draw...
 		window->clear();
 
-		for each (Sprite sprite in FrameHandler::spriteList)
+		for each (Transform sprite in FrameHandler::spriteList)
 		{
-			//Logic for drawing Sprites
+			//sprite.Update();
+			sf::Sprite spr = sprite.getSprite();
+			window->draw(spr);
 		}
 
 		// end the current frame
@@ -48,24 +48,38 @@ void FrameHandler::CreateFrame(int width, int height, std::string title){
 	window.setActive(false);
 
 	// launch the rendering thread
-	sf::Thread thread(&FrameHandler::renderingThread, &window);
-	thread.launch();
+	sf::Thread rthread(&FrameHandler::renderingThread, &window);
+	rthread.launch();
 
 	while (window.isOpen())
 	{
+		clock_t begin = clock();
+
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
 			if (event.type == sf::Event::Closed)
 				window.close();
 		}
+
+		elapsed_secs = double(clock() - begin) / CLOCKS_PER_SEC;
 	}
+	/*
+	thread wthread(&FrameHandler::windowThread, &window);
+	wthread.join();
+	*/
 }
 
-list<Sprite> init()
+void FrameHandler::windowThread(sf::RenderWindow* window){
+	window->setActive(true);
+}
+
+list<Transform> init()
 {
-	list<Sprite> tmp; 
+	list<Transform> tmp; 
 	return tmp;
 }
 
-list<Sprite> FrameHandler::spriteList(init());
+list<Transform> FrameHandler::spriteList(init());
+
+double FrameHandler::elapsed_secs;

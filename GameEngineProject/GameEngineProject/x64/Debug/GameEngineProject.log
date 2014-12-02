@@ -1,11 +1,6 @@
-﻿Build started 20-11-2014 13:05:04.
+﻿Build started 02-12-2014 10:51:30.
      1>Project "C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\GameEngineProject\GameEngineProject.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"SFML-2.1\include" /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"x64\Debug\GameEngineProject.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt FrameHandler.cpp GameEngineProject.cpp
-         GameEngineProject.cpp
-         FrameHandler.cpp
-         Generating Code...
-       PreLinkEvent:
+     1>PreLinkEvent:
          copy SFML-2.1\bin
          :VCEnd
          SFML-2.1\bin\libsndfile-1.dll
@@ -26,9 +21,10 @@
          x64\Debug\GameEngineProject.obj
          x64\Debug\Sprite.obj
          x64\Debug\stdafx.obj
+         x64\Debug\Transform.obj
          GameEngineProject.vcxproj -> C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\x64\Debug\GameEngineProject.exe
      1>Done Building Project "C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\GameEngineProject\GameEngineProject.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:03.85
+Time Elapsed 00:00:00.62
