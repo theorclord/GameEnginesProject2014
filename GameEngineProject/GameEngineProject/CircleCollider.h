@@ -12,5 +12,5 @@ class CircleCollider
 		bool DetectCollision(CircleCollider coll, float dist);
 		float getRadius();
 		void setRadius(float rad);
-		void OnEnter();
+		virtual void OnEnter();
 };
