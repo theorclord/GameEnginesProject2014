@@ -1,7 +1,11 @@
+#include "stdafx.h"
 # include "Transform.h"
 #include <cmath>
 
 Transform::Transform(){
+}
+
+Transform::~Transform(){
 }
 
 void Transform::setSprite(string spritePath){
@@ -38,8 +42,14 @@ Physics Transform::getPhysics(){
 bool Transform::DetectCollision(Transform transform){
 	float dist = std::sqrtf(std::powf(transform.getSprite().getPosition().x - Transform::sprite.getPosition().x, 2) + 
 		std::powf(transform.getSprite().getPosition().y - Transform::sprite.getPosition().y, 2));
-	if (Transform::collider.DetectCollision(transform)){
-
-	}
+	Transform::coll.DetectCollision(transform.getCollider(), dist);
 	return false;
+}
+
+CircleCollider Transform::getCollider(){
+	return Transform::coll;
+}
+
+void Transform::setCollider(CircleCollider coll){
+	Transform::coll = coll;
 }

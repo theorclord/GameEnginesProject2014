@@ -3,9 +3,8 @@
 #include "stdafx.h"
 #include "Physics.h"
 #include <string>
-#include <tuple>
 #include <SFML/Graphics.hpp>
-#include "Collider.h"
+#include "CircleCollider.h"
 
 using namespace std;
 
@@ -20,8 +19,8 @@ public:
 	void setLayer(int layer);
 	void setPhysics(Physics physics);
 	Physics getPhysics();
-	Collider getCollider();
-	void setCollider();
+	CircleCollider getCollider();
+	void setCollider(CircleCollider coll);
 
 	virtual bool DetectCollision(Transform transfrom); //True if collided, false if not
 
@@ -32,5 +31,5 @@ private:
 	sf::Sprite sprite;
 	string spritePath;
 	int layer;
-	Collider collider;
+	CircleCollider coll;
 };
