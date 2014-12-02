@@ -1,7 +1,6 @@
 #pragma once
 
 #include "stdafx.h"
-#include <string>
 #include <tuple>
 
 using namespace std;
@@ -12,8 +11,10 @@ class Physics
 		Physics();
 		~Physics();
 		virtual void setVelocity(tuple<float,float> velocity);
-		virtual void addForce(tuple<float, float> force);
-
+		virtual tuple<float,float> getVelocity();
+		virtual void addAcceleration(tuple<float, float> acc);
+		virtual void Update();
+		
 	private:
 		tuple<float,float> velocity;
 		tuple<float,float> forceSum;

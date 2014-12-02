@@ -1,3 +1,7 @@
+#pragma once
+
+#include "stdafx.h"
+#include "Physics.h"
 #include <string>
 #include <tuple>
 #include <SFML/Graphics.hpp>
@@ -9,11 +13,19 @@ class Transform
 public:
 	Transform();
 	~Transform();
-	virtual void setSprite(sf::Sprite sprite);
+	//virtual void setSprite(sf::Sprite sprite);
 	virtual sf::Sprite getSprite();
+	virtual void setSprite(string);
 	virtual int getLayer();
+	virtual int setLayer(int layer);
+	virtual void addPhysics(Physics physics);
+	virtual bool DetectCollision(Transform transfrom); //True if collided, false if not
+
+	virtual void Update();
 
 private:
+	Physics physics;
 	sf::Sprite sprite;
+	string spritePath;
 	int layer;
 };
