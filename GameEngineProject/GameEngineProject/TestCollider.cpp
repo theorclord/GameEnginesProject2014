@@ -1,7 +1,7 @@
-#include "TestCollider.h"
 #include "stdafx.h"
+#include "TestCollider.h"
 #include <iostream>
 
-void OnEnter(){
+void TestCollider::OnEnter(){
 	std::cout << "test";
 }

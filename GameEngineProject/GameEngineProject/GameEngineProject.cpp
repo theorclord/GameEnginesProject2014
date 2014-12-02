@@ -1,26 +1,43 @@
-// GameEngineProject.cpp : Defines the entry point for the console application.
-//
+
 
 #include "stdafx.h"
 #include "FrameHandler.h"
-#include <SFML/Graphics.hpp>
 #include "Sprite.h"
+#include <thread>
+#include <iostream>
+#include "TestCollider.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	Sprite testSprite("my sprite", "Assets\\sprite.jpg");
+	Transform trans1;
+	TestCollider cc;
+	cc.setRadius(150);
+	trans1.setSprite("Assets\\sprite.jpg");
+	trans1.getSprite()->setPosition(100, 100);
+	trans1.setPhysics(Physics());
+	trans1.setCollider(cc);
 
+	Transform trans2;
+	CircleCollider c2;
+	c2.setRadius(150);
+	trans2.setSprite("Assets\\sprite.jpg");
+	trans2.getSprite()->setPosition(200, 100);
+	trans2.setPhysics(Physics());
+	trans2.setCollider(c2);
 
 	FrameHandler handler;
-	handler.CreateFrame(300,300, "hej claus");
-	//handler.AddSprite(testSprite);
-
-	sf::RenderWindow window(sf::VideoMode(400, 400), "SFML works!");
-    sf::CircleShape shape(100.f);
+	handler.AddSprite(trans1);
+	handler.CreateFrame(1000, 900, "hej claus");
+	handler.AddSprite(trans2);
+	handler.CreateFrame(1000, 900, "hej mikkel");
+	
+	/*
+	sf::RenderWindow window(sf::VideoMode(1000, 400), "SFML works!");
 	sf::Texture spriteImg;
-	spriteImg.loadFromFile("Assets\\sprite.jpg");
-	sf::Sprite sprite(spriteImg);
-    shape.setFillColor(sf::Color::Green);
+	spriteImg.loadFromFile("Assets\\sprite.jpg"); 
+	sf::Sprite sprite(spriteImg); 
+	sprite.setPosition(500, 100);
+    //shape.setFillColor(sf::Color::Green);
 
     while (window.isOpen())
     {
@@ -32,10 +49,13 @@ int _tmain(int argc, _TCHAR* argv[])
         }
 		
         window.clear();
-        window.draw(shape);
+        //window.draw(shape);
 		window.draw(sprite);
         window.display();
     }
+	*/
+	
+	
 
     return 0;
 }

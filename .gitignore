@@ -7,3 +7,6 @@
 GameEngineProject/GameEngineProject.sdf
 *.orig
 *.exe
+*.tlog
+*.idb¨
+*.ilk

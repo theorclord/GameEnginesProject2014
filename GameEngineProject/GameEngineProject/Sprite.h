@@ -16,7 +16,8 @@ class Sprite
 		Sprite(string title, string filePath);
 		virtual void setPosition(int x, int y);
 		virtual tuple<int,int> getPosition();
-		virtual void setImage(string filePath);
+		void setImage(string filePath);
+		sf::Texture getImage();
 
 	private:
 		string title;

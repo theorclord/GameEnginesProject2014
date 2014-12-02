@@ -1,5 +1,5 @@
 #include "stdafx.h"
-# include "Transform.h"
+#include "Transform.h"
 #include <cmath>
 
 Transform::Transform(){
@@ -11,12 +11,14 @@ Transform::~Transform(){
 void Transform::setSprite(string spritePath){
 	sf::Texture spriteImg;
 	spriteImg.loadFromFile(spritePath);
-	Transform::sprite = sf::Sprite(spriteImg);
+	Transform::tex = sf::Texture(spriteImg);
+	Transform::sprite = sf::Sprite(tex);
 }
 
-sf::Sprite Transform::getSprite(){
-	return Transform::sprite;
+sf::Sprite* Transform::getSprite(){
+	return &sprite;
 }
+
 int Transform::getLayer(){
 	return Transform::layer;
 }
@@ -40,9 +42,11 @@ Physics Transform::getPhysics(){
 }
 
 bool Transform::DetectCollision(Transform transform){
-	float dist = std::sqrtf(std::powf(transform.getSprite().getPosition().x - Transform::sprite.getPosition().x, 2) + 
-		std::powf(transform.getSprite().getPosition().y - Transform::sprite.getPosition().y, 2));
-	Transform::coll.DetectCollision(transform.getCollider(), dist);
+	float dist = std::sqrtf(std::powf(transform.getSprite()->getPosition().x - Transform::sprite.getPosition().x, 2) + 
+		std::powf(transform.getSprite()->getPosition().y - Transform::sprite.getPosition().y, 2));
+	if (Transform::coll.DetectCollision(transform.getCollider(), dist)){
+		transform.getCollider().OnEnter();
+	}
 	return false;
 }
 

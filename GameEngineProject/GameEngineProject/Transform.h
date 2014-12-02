@@ -13,7 +13,7 @@ class Transform
 public:
 	Transform();
 	~Transform();
-	sf::Sprite getSprite();
+	sf::Sprite* getSprite();
 	void setSprite(string);
 	int getLayer();
 	void setLayer(int layer);
@@ -31,5 +31,6 @@ private:
 	sf::Sprite sprite;
 	string spritePath;
 	int layer;
+	sf::Texture tex;
 	CircleCollider coll;
 };
