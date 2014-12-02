@@ -17,15 +17,17 @@ public:
 	virtual sf::Sprite getSprite();
 	virtual void setSprite(string);
 	virtual int getLayer();
-	virtual int setLayer(int layer);
-	virtual void addPhysics(Physics physics);
+	virtual void setLayer(int layer);
+	void setPhysics(Physics physics);
+	Physics getPhysics();
 	virtual bool DetectCollision(Transform transfrom); //True if collided, false if not
 
-	virtual void Update();
+	void Update();
 
 private:
 	Physics physics;
 	sf::Sprite sprite;
 	string spritePath;
 	int layer;
+	sf::Texture tex;
 };

@@ -1,16 +1,39 @@
-﻿Build started 02-12-2014 11:06:45.
+﻿Build started 02-12-2014 11:31:22.
      1>Project "C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\GameEngineProject\GameEngineProject.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"SFML-2.1\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\GameEngineProject.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GameEngineProject.cpp Physics.cpp Transform.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"SFML-2.1\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\GameEngineProject.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt FrameHandler.cpp GameEngineProject.cpp Transform.cpp
          Transform.cpp
-         Physics.cpp
-         GameEngineProject.cpp
-     1>c:\projects\gameengineproject\gameenginesproject2014\gameengineproject\gameengineproject\gameengineproject.cpp(16): error C2664: 'void Transform::setSprite(std::string)' : cannot convert argument 1 from 'sf::Sprite' to 'std::string'
-                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
          Generating Code...
-     1>c:\projects\gameengineproject\gameenginesproject2014\gameengineproject\gameengineproject\transform.cpp(23): error C4716: 'Transform::setLayer' : must return a value
+         Compiling...
+         GameEngineProject.cpp
+         FrameHandler.cpp
+         Generating Code...
+       PreLinkEvent:
+         copy SFML-2.1\bin
+         :VCEnd
+         SFML-2.1\bin\libsndfile-1.dll
+         SFML-2.1\bin\openal32.dll
+         SFML-2.1\bin\sfml-audio-2.dll
+         SFML-2.1\bin\sfml-audio-d-2.dll
+         SFML-2.1\bin\sfml-graphics-2.dll
+         SFML-2.1\bin\sfml-graphics-d-2.dll
+         SFML-2.1\bin\sfml-network-2.dll
+         SFML-2.1\bin\sfml-network-d-2.dll
+         SFML-2.1\bin\sfml-system-2.dll
+         SFML-2.1\bin\sfml-system-d-2.dll
+         SFML-2.1\bin\sfml-window-2.dll
+         SFML-2.1\bin\sfml-window-d-2.dll
+                12 file(s) copied.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\Debug\GameEngineProject.exe" /INCREMENTAL /NOLOGO /LIBPATH:"SFML-2.1\lib" "sfml-audio-d.lib" "sfml-graphics-d.lib" "sfml-main-d.lib" "sfml-network-d.lib" "sfml-system-d.lib" "sfml-window-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\Debug\GameEngineProject.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\Debug\GameEngineProject.lib" /MACHINE:X86 Debug\FrameHandler.obj
+         Debug\GameEngineProject.obj
+         Debug\Physics.obj
+         Debug\Sprite.obj
+         Debug\stdafx.obj
+         Debug\Transform.obj
+     1>sfml-graphics-d.lib(sfml-graphics-d-2.dll) : fatal error LNK1112: module machine type 'x64' conflicts with target machine type 'X86'
      1>Done Building Project "C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\GameEngineProject\GameEngineProject.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:01.10
+Time Elapsed 00:00:02.03

@@ -9,12 +9,14 @@
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	/*
 	sf::Texture spriteImg;
 	spriteImg.loadFromFile("Assets\\sprite.jpg");
 	sf::Sprite testSprite(spriteImg);
+	*/
 	Transform trans1; 
-	trans1.setSprite(testSprite);
-	//Transform trans2();
+	trans1.setSprite("Assets\\sprite.jpg");
+	Transform trans2;
 
 	FrameHandler handler;
 	handler.CreateFrame(300, 300, "hej claus");
@@ -27,9 +29,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	wthread.join();
 	*/
 
+	
 	/*
 	sf::RenderWindow window(sf::VideoMode(400, 400), "SFML works!");
-
 	sf::Texture spriteImg;
 	spriteImg.loadFromFile("Assets\\sprite.jpg"); 
 	sf::Sprite sprite(spriteImg); 
@@ -50,6 +52,7 @@ int _tmain(int argc, _TCHAR* argv[])
         window.display();
     }
 	*/
+	
 
     return 0;
 }

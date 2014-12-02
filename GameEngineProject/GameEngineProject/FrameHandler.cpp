@@ -31,7 +31,10 @@ void FrameHandler::renderingThread(sf::RenderWindow* window)
 
 		for each (Transform sprite in FrameHandler::spriteList)
 		{
-			//sprite.Update();
+			for each (Transform spritez in FrameHandler::spriteList){
+				sprite.DetectCollision(spritez);
+			}
+			sprite.Update();
 			sf::Sprite spr = sprite.getSprite();
 			window->draw(spr);
 		}
