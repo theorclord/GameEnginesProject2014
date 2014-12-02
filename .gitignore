@@ -3,3 +3,5 @@
 *.pch
 *.ikl
 *.pdb
+*.suo
+GameEngineProject/GameEngineProject.sdf

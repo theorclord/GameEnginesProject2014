@@ -13,14 +13,16 @@ class Transform
 public:
 	Transform();
 	~Transform();
-	virtual void setSpritePath(string);
-	virtual void setSprite(sf::Sprite sprite);
+	//virtual void setSprite(sf::Sprite sprite);
 	virtual sf::Sprite getSprite();
+	virtual void setSprite(string);
 	virtual int getLayer();
 	virtual int setLayer(int layer);
 	void setPhysics(Physics physics);
 	Physics getPhysics();
-	void update();
+	virtual bool DetectCollision(Transform transfrom); //True if collided, false if not
+
+	void Update();
 
 private:
 	Physics physics;
