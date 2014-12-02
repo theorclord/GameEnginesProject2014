@@ -19,3 +19,14 @@ int Transform::getLayer(){
 int Transform::setLayer(int layer){
 	Transform::layer = layer;
 }
+
+void Transform::setPhysics(Physics physics){
+	Transform::physics = physics;
+}
+
+Physics Transform::getPhysics(){
+	return Transform::physics;
+}
+
+void Transform::update(){
+}

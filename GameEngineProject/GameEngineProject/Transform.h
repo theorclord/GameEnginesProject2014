@@ -13,11 +13,14 @@ class Transform
 public:
 	Transform();
 	~Transform();
+	virtual void setSpritePath(string);
 	virtual void setSprite(sf::Sprite sprite);
 	virtual sf::Sprite getSprite();
-	virtual void setSpritePath(string);
 	virtual int getLayer();
 	virtual int setLayer(int layer);
+	void setPhysics(Physics physics);
+	Physics getPhysics();
+	void update();
 
 private:
 	Physics physics;
