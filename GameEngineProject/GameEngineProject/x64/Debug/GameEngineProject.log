@@ -1,58 +1,25 @@
-﻿Build started 04-12-2014 13:29:49.
-     1>Project "C:\ITU\GameEngines\GameEnginesProject2014\GameEngineProject\GameEngineProject\GameEngineProject.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"SFML-2.1\include" /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"x64\Debug\GameEngineProject.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt stdafx.cpp
-         stdafx.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"SFML-2.1\include" /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"x64\Debug\GameEngineProject.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt CircleCollider.cpp FrameHandler.cpp GameEngineProject.cpp Physics.cpp TestCollider.cpp Transform.cpp
-         Transform.cpp
-     1>Transform.cpp(5): error C2758: 'Transform::coll' : a member of reference type must be initialized
-                 c:\itu\gameengines\gameenginesproject2014\gameengineproject\gameengineproject\Transform.h(35) : see declaration of 'Transform::coll'
-     1>Transform.cpp(47): error C2664: 'bool CircleCollider::DetectCollision(CircleCollider &,float)' : cannot convert argument 1 from 'std::unique_ptr<CircleCollider,std::default_delete<_Ty>>' to 'CircleCollider &'
-                 with
-                 [
-                     _Ty=CircleCollider
-                 ]
-     1>Transform.cpp(48): error C2039: 'OnEnter' : is not a member of 'std::unique_ptr<CircleCollider,std::default_delete<_Ty>>'
-                 with
-                 [
-                     _Ty=CircleCollider
-                 ]
-     1>Transform.cpp(53): error C2259: 'CircleCollider' : cannot instantiate abstract class
-                 due to following members:
-                 'void CircleCollider::OnEnter(void)' : is abstract
-                 c:\itu\gameengines\gameenginesproject2014\gameengineproject\gameengineproject\CircleCollider.h(19) : see declaration of 'CircleCollider::OnEnter'
-     1>Transform.cpp(53): error C2556: 'CircleCollider Transform::getCollider(void)' : overloaded function differs only by return type from 'std::unique_ptr<CircleCollider,std::default_delete<_Ty>> Transform::getCollider(void)'
-                 with
-                 [
-                     _Ty=CircleCollider
-                 ]
-                 c:\itu\gameengines\gameenginesproject2014\gameengineproject\gameengineproject\Transform.h(22) : see declaration of 'Transform::getCollider'
-     1>Transform.cpp(57): error C2259: 'CircleCollider' : cannot instantiate abstract class
-                 due to following members:
-                 'void CircleCollider::OnEnter(void)' : is abstract
-                 c:\itu\gameengines\gameenginesproject2014\gameengineproject\gameengineproject\CircleCollider.h(19) : see declaration of 'CircleCollider::OnEnter'
-     1>Transform.cpp(57): error C2511: 'void Transform::setCollider(CircleCollider)' : overloaded member function not found in 'Transform'
-                 c:\itu\gameengines\gameenginesproject2014\gameengineproject\gameengineproject\Transform.h(12) : see declaration of 'Transform'
-     1>Transform.cpp(58): error C2597: illegal reference to non-static member 'Transform::coll'
-         TestCollider.cpp
-         Physics.cpp
-         GameEngineProject.cpp
-         FrameHandler.cpp
-     1>FrameHandler.cpp(36): error C2582: 'operator =' function is unavailable in 'Transform'
-         CircleCollider.cpp
-     1>CircleCollider.cpp(13): error C2259: 'CircleCollider' : cannot instantiate abstract class
-                 due to following members:
-                 'void CircleCollider::OnEnter(void)' : is abstract
-                 c:\itu\gameengines\gameenginesproject2014\gameengineproject\gameengineproject\CircleCollider.h(19) : see declaration of 'CircleCollider::OnEnter'
-     1>CircleCollider.cpp(13): error C2511: 'bool CircleCollider::DetectCollision(CircleCollider,float)' : overloaded member function not found in 'CircleCollider'
-                 c:\itu\gameengines\gameenginesproject2014\gameengineproject\gameengineproject\CircleCollider.h(8) : see declaration of 'CircleCollider'
-     1>CircleCollider.cpp(14): error C2597: illegal reference to non-static member 'CircleCollider::radius'
-     1>CircleCollider.cpp(14): error C3867: 'CircleCollider::radius': function call missing argument list; use '&CircleCollider::radius' to create a pointer to member
-     1>CircleCollider.cpp(14): error C2568: '+' : unable to resolve function overload
-                 unable to recover from previous error(s); stopping compilation
-         Generating Code...
-     1>Done Building Project "C:\ITU\GameEngines\GameEnginesProject2014\GameEngineProject\GameEngineProject\GameEngineProject.vcxproj" (Build target(s)) -- FAILED.
+﻿Build started 04-12-2014 14:47:59.
+     1>Project "C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\GameEngineProject\GameEngineProject.vcxproj" on node 2 (Build target(s)).
+     1>PreLinkEvent:
+         copy SFML-2.1\bin
+         :VCEnd
+         SFML-2.1\bin\libsndfile-1.dll
+         SFML-2.1\bin\openal32.dll
+         SFML-2.1\bin\sfml-audio-2.dll
+         SFML-2.1\bin\sfml-audio-d-2.dll
+         SFML-2.1\bin\sfml-graphics-2.dll
+         SFML-2.1\bin\sfml-graphics-d-2.dll
+         SFML-2.1\bin\sfml-network-2.dll
+         SFML-2.1\bin\sfml-network-d-2.dll
+         SFML-2.1\bin\sfml-system-2.dll
+         SFML-2.1\bin\sfml-system-d-2.dll
+         SFML-2.1\bin\sfml-window-2.dll
+         SFML-2.1\bin\sfml-window-d-2.dll
+                12 file(s) copied.
+       Link:
+         GameEngineProject.vcxproj -> C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\x64\Debug\GameEngineProject.exe
+     1>Done Building Project "C:\projects\GameEngineProject\GameEnginesProject2014\GameEngineProject\GameEngineProject\GameEngineProject.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:03.71
+Time Elapsed 00:00:00.32

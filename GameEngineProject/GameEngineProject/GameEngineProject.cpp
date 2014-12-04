@@ -14,7 +14,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	trans1.setSprite("Assets\\sprite.jpg");
 	trans1.getSprite()->setPosition(100, 100);
 	trans1.setPhysics(Physics());
-	trans1.setCollider(cc);
+	trans1.setCollider(&cc);
 
 	Transform trans2;
 	//CircleCollider c2;
@@ -23,7 +23,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	trans2.setSprite("Assets\\sprite.jpg");
 	trans2.getSprite()->setPosition(200, 100);
 	trans2.setPhysics(Physics());
-	trans2.setCollider(c2);
+	trans2.setCollider(&c2);
 
 	FrameHandler handler;
 	handler.AddSprite(trans1);

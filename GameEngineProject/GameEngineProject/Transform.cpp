@@ -44,8 +44,8 @@ Physics Transform::getPhysics(){
 bool Transform::DetectCollision(Transform transform){
 	float dist = std::sqrtf(std::powf(transform.getSprite()->getPosition().x - Transform::sprite.getPosition().x, 2) + 
 		std::powf(transform.getSprite()->getPosition().y - Transform::sprite.getPosition().y, 2));
-	if (Transform::coll->DetectCollision(*transform.getCollider(), dist)){
-		transform.getCollider().OnEnter();
+	if (Transform::coll->DetectCollision(transform.getCollider(), dist)){
+		transform.getCollider()->OnEnter();
 	}
 	return false;
 }
