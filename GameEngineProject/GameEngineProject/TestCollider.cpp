@@ -3,5 +3,5 @@
 #include <iostream>
 
 void TestCollider::OnEnter(){
-	std::cout << "test";
+	std::cout << "This is overridden function";
 }

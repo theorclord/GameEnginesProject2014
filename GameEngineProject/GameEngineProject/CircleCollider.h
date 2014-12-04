@@ -3,6 +3,7 @@
 #include <tuple>
 //#include "Transform.h"
 
+
 class CircleCollider
 {
 	private:
@@ -10,11 +11,11 @@ class CircleCollider
 		float radius;
 		bool stay;
 	public:
-		bool DetectCollision(CircleCollider coll, float dist);
+		bool DetectCollision(CircleCollider &coll, float dist);
 		float getRadius();
 		void setRadius(float rad);
 		std::tuple<float, float> getCenter();
 		void setCenter(std::tuple<float,float> center);
-		virtual void OnEnter();
+		virtual void OnEnter() = 0;
 		
 };

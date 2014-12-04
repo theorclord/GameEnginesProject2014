@@ -5,5 +5,5 @@
 
 class TestCollider : public CircleCollider{
 	public:
-		void OnEnter();
+		virtual void OnEnter();
 };

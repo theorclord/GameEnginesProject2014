@@ -2,7 +2,6 @@
 
 #include "stdafx.h"
 #include "FrameHandler.h"
-#include "Sprite.h"
 #include <thread>
 #include <iostream>
 #include "TestCollider.h"
@@ -18,7 +17,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	trans1.setCollider(cc);
 
 	Transform trans2;
-	CircleCollider c2;
+	//CircleCollider c2;
+	TestCollider c2;
 	c2.setRadius(150);
 	trans2.setSprite("Assets\\sprite.jpg");
 	trans2.getSprite()->setPosition(200, 100);

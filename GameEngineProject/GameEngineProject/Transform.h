@@ -19,8 +19,8 @@ public:
 	void setLayer(int layer);
 	void setPhysics(Physics physics);
 	Physics getPhysics();
-	CircleCollider getCollider();
-	void setCollider(CircleCollider coll);
+	CircleCollider* getCollider();
+	void setCollider(CircleCollider* coll);
 
 	virtual bool DetectCollision(Transform transfrom); //True if collided, false if not
 
@@ -32,5 +32,5 @@ private:
 	string spritePath;
 	int layer;
 	sf::Texture tex;
-	CircleCollider coll;
+	CircleCollider* coll;
 };
