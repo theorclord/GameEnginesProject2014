@@ -6,8 +6,6 @@
 #include <SFML/Graphics.hpp>
 #include "CircleCollider.h"
 
-using namespace std;
-
 class Transform
 {
 public:

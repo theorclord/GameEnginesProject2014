@@ -11,10 +11,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	Transform trans1;
 	TestCollider cc;
 	cc.setRadius(150);
+	cc.setTransform(&trans1);
 	trans1.setSprite("Assets\\sprite.jpg");
 	trans1.getSprite()->setPosition(100, 100);
 	trans1.setPhysics(Physics());
+	trans1.getPhysics().setVelocity(std::tuple<float, float>(1.0f, 1.0f));
 	trans1.setCollider(&cc);
+	trans1.setLayer(0);
 
 	Transform trans2;
 	//CircleCollider c2;
@@ -24,6 +27,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	trans2.getSprite()->setPosition(200, 100);
 	trans2.setPhysics(Physics());
 	trans2.setCollider(&c2);
+	trans2.setLayer(0);
 
 	FrameHandler handler;
 	handler.AddSprite(trans1);
